@@ -28,6 +28,7 @@ Sum =A’B’Cin + A’BCin’ + ABCin + AB’Cin’ = A ⊕ B ⊕ Cin Carry = A
 ![image](https://user-images.githubusercontent.com/36288975/163552057-b3547877-6d07-45b4-b7e0-bcfebfad9e1d.png)
 
 #### Figure -02 FULL ADDER 
+![image](https://github.com/sandhiya2815/Exp-02-Implementation-of-Half-Adder-and-Full-Adder-circuit/assets/155123230/ca407adf-e3aa-40b0-9877-08e00c011555)
 
 ### Procedure
 
@@ -35,20 +36,47 @@ Connect the supply (+5V) to the circuit
 Switch ON the main switch
 If the output is 1, then the led glows.
 ### 
+
 Program:
+```
 /*
 Program to design a half adder and full adder circuit and verify its truth table in quartus using Verilog programming.
-Developed by: 
-RegisterNumber:  
+Developed by: saridha M A
+RegisterNumber: 23013627 
 */
-Logic symbol & Truthtable
+module project_3(sum,carry,a,b); 
+input a,b; 
+output sum,carry; 
+xor sum1(sum,a,b); 
+and carry1(carry,a,b); 
+endmodule
+```
 RTL realization
+![image](https://github.com/sandhiya2815/Exp-02-Implementation-of-Half-Adder-and-Full-Adder-circuit/assets/155123230/e4585857-094f-4231-9add-d610d29a6bef)
+Timing diagram
+![image](https://github.com/sandhiya2815/Exp-02-Implementation-of-Half-Adder-and-Full-Adder-circuit/assets/155123230/bc76d7b7-e7a7-4880-a659-57d310b9d3f9)
+Truth table
+![image](https://github.com/sandhiya2815/Exp-02-Implementation-of-Half-Adder-and-Full-Adder-circuit/assets/155123230/55bb89ab-197f-4936-981a-5c734ce44006)
 
-### Output:
+Program :
+```
+module project_3_2(a,b,c,sum,carry);
+input a,b,c;
+output sum,carry;
+xor(sum,a,b,c);
+assign carry=a&b | b&c | a&c;
+endmodule
+```
 ### RTL
-### TIMING DIAGRAM
+![image](https://github.com/sandhiya2815/Exp-02-Implementation-of-Half-Adder-and-Full-Adder-circuit/assets/155123230/4e65d33e-fc6f-44ef-9f14-35139a309d94)
 
+### TIMING DIAGRAM
+![image](https://github.com/sandhiya2815/Exp-02-Implementation-of-Half-Adder-and-Full-Adder-circuit/assets/155123230/4c1d47a0-23a4-4d4c-b900-81f0ae8833ad)
 
 ### TRUTH TABLE 
+![image](https://github.com/sandhiya2815/Exp-02-Implementation-of-Half-Adder-and-Full-Adder-circuit/assets/155123230/fa625381-dc5b-44e9-895d-10945ac03a9b)
+
 
 ### Result:
+Thus the given logic functions are implemented and their operations are verified using verilog programming
+
